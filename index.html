@@ -1,109 +1,37 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-  <meta charset="UTF-8"> 
-  <title>Online Course Enrollment</title> 
-  <style> 
-    body { 
-      font-family: Arial, sans-serif; 
-      background-color: #f2f2f2; 
-      margin: 0; 
-      padding: 20px; 
-    } 
-    h1 { 
-      text-align: center; 
-      color: #2c3e50; 
-    } 
-    .container { 
-      max-width: 600px; 
-      margin: auto; 
-      background-color: white; 
-      padding: 20px; 
-      border-radius: 10px; 
-      box-shadow: 0 0 10px rgba(0,0,0,0.1); 
-    } 
-    img { 
-      display: block; 
-      margin: 20px auto; 
-      max-width: 100%; 
-      height: auto; 
-      border-radius: 10px; 
-    } 
-    label { 
-      display: block; 
-      margin-top: 15px; 
-    } 
-    input, select, textarea { 
-      width: 100%; 
-      padding: 8px; 
-      margin-top: 5px; 
-      border-radius: 5px; 
-      border: 1px solid #ccc; 
- 
-24 
- 
-    } 
-    .checkbox-container { 
-      margin-top: 15px; 
-    } 
-    button { 
-      margin-top: 20px; 
-      padding: 10px; 
-      background-color: #3498db; 
-      color: white; 
-      border: none; 
-      border-radius: 5px; 
-      width: 100%; 
-      font-size: 16px; 
-    } 
-    button:hover { 
-      background-color: #2980b9; 
-    } 
-  </style> 
-</head> 
-<body> 
- 
-  <h1>Online Course Enrollment</h1> 
- 
-  <div class="container"> 
-    <p>Welcome to our online learning platform! We offer a variety of flexible courses to help you 
-grow your skills from anywhere, at any time. Fill out the form below to get started on your learning 
-journey.</p> 
- 
-    <img src="https://via.placeholder.com/600x200?text=Online+Learning" alt="Online Learning 
-Image"> 
- 
-    <form> 
-      <label for="name">Student Name:</label> 
-      <input type="text" id="name" name="name" required> 
- 
-      <label for="age">Age:</label> 
-      <input type="number" id="age" name="age" min="10" max="100" required> 
- 
-      <label for="course">Select Your Course:</label> 
-      <select id="course" name="course" required> 
-        <option value="">--Choose a course--</option> 
-        <option value="web_dev">Web Development</option> 
-        <option value="data_sci">Data Science</option> 
-        <option value="graphic_design">Graphic Design</option> 
-        <option value="digital_marketing">Digital Marketing</option> 
-      </select> 
- 
-      <label for="mode">Choose Your Learning Mode:</label> 
-      <select id="mode" name="mode" required> 
-        <option value="">--Select Mode--</option> 
-        <option value="online">Online</option> 
-        <option value="offline">Offline</option> 
-        <option value="hybrid">Hybrid</option> 
-</select> 
-<div class="checkbox-container"> 
-<input type="checkbox" id="terms" name="terms" required> 
-<label for="terms">I agree to the terms and conditions</label> 
-</div> 
-<label for="comments">Additional Comments:</label> 
-<textarea id="comments" name="comments" rows="4" placeholder="Write here..."></textarea> 
-<button type="submit">Enroll Now</button>
-</form> 
-</div> 
-</body> 
-</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Daily Task Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <h1>📝 Daily Task Manager</h1>
+
+    <div class="task-input">
+      <input type="text" id="taskInput" placeholder="Enter a task..." />
+      <select id="taskCategory">
+        <option value="morning">☀️ Morning</option>
+        <option value="work">💼 Work</option>
+        <option value="evening">🌙 Evening</option>
+      </select>
+      <button id="addTask">Add Task</button>
+    </div>
+
+    <div class="tasks-section">
+      <h2>☀️ Morning</h2>
+      <ul id="morningTasks" class="task-list"></ul>
+
+      <h2>💼 Work</h2>
+      <ul id="workTasks" class="task-list"></ul>
+
+      <h2>🌙 Evening</h2>
+      <ul id="eveningTasks" class="task-list"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
